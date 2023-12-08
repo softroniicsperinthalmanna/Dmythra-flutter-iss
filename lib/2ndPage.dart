@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class Two extends StatefulWidget {
+  class Two extends StatefulWidget {
   const Two({super.key});
 
   @override

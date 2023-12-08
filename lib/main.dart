@@ -1,15 +1,31 @@
 import 'package:dmythra/2ndPage.dart';
+import 'package:dmythra/Medicine.dart';
 import 'package:dmythra/OrganisationLogin.dart';
 import 'package:dmythra/OrganizationReg.dart';
+import 'package:dmythra/academic.dart';
 import 'package:dmythra/activityPost.dart';
+import 'package:dmythra/callingOrganization.dart';
+import 'package:dmythra/carrerPage.dart';
+import 'package:dmythra/clothes.dart';
+import 'package:dmythra/counseling.dart';
 import 'package:dmythra/crewList.dart';
+import 'package:dmythra/food.dart';
+import 'package:dmythra/fund.dart';
 import 'package:dmythra/help.dart';
 import 'package:dmythra/manageacademic.dart';
+import 'package:dmythra/medipage.dart';
+import 'package:dmythra/organizationList.dart';
+import 'package:dmythra/organizationhome.dart';
+import 'package:dmythra/other.dart';
 import 'package:dmythra/registration.dart';
+import 'package:dmythra/sponsorList.dart';
 import 'package:dmythra/training.dart';
+import 'package:dmythra/transport.dart';
 import 'package:dmythra/userLogin.dart';
+import 'package:dmythra/yoga.dart';
 import 'package:flutter/material.dart';
 
+import 'physio.dart';
 import 'startingPage.dart';
 import 'therapySupport.dart';
 import 'userHome.dart';
@@ -31,7 +47,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Signup()
+      home: CallingOrg()
     );
   }
 }

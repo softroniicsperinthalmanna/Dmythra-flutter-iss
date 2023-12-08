@@ -24,7 +24,7 @@ class _Therapy1State extends State<Therapy1> {
               color: Colors.black,
               size: 40,
             ),
-          )
+          ),
         ],
         backgroundColor: Color(0xFF64B4CD),
       ),
