@@ -78,7 +78,11 @@ flutter:
      - assets/images/careerImg.png
      - assets/images/academicImg.png
      - assets/images/orghomeImg.png
-
+     - assets/images/ellipse.png
+     - assets/images/useradmin.png
+     - assets/images/amdinsponsor.png
+     - assets/images/deskfive.png
+     - assets/images/deskseven.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

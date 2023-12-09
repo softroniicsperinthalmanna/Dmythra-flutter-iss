@@ -196,7 +196,7 @@ class _OrganizationReg1State extends State<OrganizationReg1> {
             ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue.shade800,
+                    backgroundColor: Color(0xFF275081),
                     fixedSize: Size(200, 50)),
                 onPressed: () {},
                 child: Text(

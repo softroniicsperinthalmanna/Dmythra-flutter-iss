@@ -126,6 +126,6 @@ class _OrganszationLoginState extends State<OrganszationLogin> {
           ]),
         ),
       ),
-    );;
+    );
   }
 }

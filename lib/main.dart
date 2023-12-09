@@ -3,16 +3,29 @@ import 'package:dmythra/Medicine.dart';
 import 'package:dmythra/OrganisationLogin.dart';
 import 'package:dmythra/OrganizationReg.dart';
 import 'package:dmythra/academic.dart';
+import 'package:dmythra/acceptedrequest.dart';
 import 'package:dmythra/activityPost.dart';
+import 'package:dmythra/addingmanageAcamedy.dart';
+import 'package:dmythra/addmanagementcareeer.dart';
+import 'package:dmythra/addingManagetherapy.dart';
+import 'package:dmythra/adminHomeorg.dart';
+import 'package:dmythra/adminHomesponsor.dart';
+import 'package:dmythra/adminHomeuser.dart';
+import 'package:dmythra/adminLogin.dart';
 import 'package:dmythra/callingOrganization.dart';
 import 'package:dmythra/carrerPage.dart';
 import 'package:dmythra/clothes.dart';
 import 'package:dmythra/counseling.dart';
 import 'package:dmythra/crewList.dart';
+import 'package:dmythra/desktop5.dart';
+import 'package:dmythra/desktop7.dart';
 import 'package:dmythra/food.dart';
 import 'package:dmythra/fund.dart';
 import 'package:dmythra/help.dart';
+import 'package:dmythra/manageCareer.dart';
+import 'package:dmythra/manageTherapy.dart';
 import 'package:dmythra/manageacademic.dart';
+import 'package:dmythra/manageacademiclink.dart';
 import 'package:dmythra/medipage.dart';
 import 'package:dmythra/organizationList.dart';
 import 'package:dmythra/organizationhome.dart';
@@ -22,6 +35,7 @@ import 'package:dmythra/sponsorList.dart';
 import 'package:dmythra/training.dart';
 import 'package:dmythra/transport.dart';
 import 'package:dmythra/userLogin.dart';
+import 'package:dmythra/viewRequest.dart';
 import 'package:dmythra/yoga.dart';
 import 'package:flutter/material.dart';
 
@@ -43,11 +57,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: CallingOrg()
+      home: Desktop7()
     );
   }
 }
