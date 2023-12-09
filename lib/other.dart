@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Other1 extends StatefulWidget {
@@ -37,9 +38,13 @@ class _Other1State extends State<Other1> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
-                      Icons.arrow_back_ios_new_sharp,
-                    ),
+                    IconButton(onPressed: () {
+                      Navigator.pop(context);
+                    }, icon:Icon(
+                      CupertinoIcons.back,
+                      color: Colors.black,
+                      size: 35,
+                    ), ),
                     Icon(
                       Icons.home_filled,
                       color: Colors.black,

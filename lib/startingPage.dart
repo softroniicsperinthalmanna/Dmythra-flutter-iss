@@ -19,8 +19,7 @@ class _OneState extends State<One> {
           Container(
             height: 460,
             width: 422,
-            decoration: BoxDecoration(
-            ),
+            decoration: BoxDecoration(),
             child: Column(
               children: [
                 Image.asset('assets/images/first1.png'),
@@ -42,9 +41,13 @@ class _OneState extends State<One> {
                   height: 60,
                   color: Colors.blue.shade800,
                   child: IconButton(
-                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {
-                        return Two();
-                      },));},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return Two();
+                          },
+                        ));
+                      },
                       icon: Icon(
                         Icons.arrow_forward,
                         size: 30,

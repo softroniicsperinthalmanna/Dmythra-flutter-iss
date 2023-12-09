@@ -1,3 +1,5 @@
+import 'package:dmythra/academic.dart';
+import 'package:dmythra/carrerPage.dart';
 import 'package:flutter/material.dart';
 
 class Training extends StatefulWidget {
@@ -13,9 +15,11 @@ class _TrainingState extends State<Training> {
     return Scaffold(
       backgroundColor: Color(0xFF64B4CD),
       appBar: AppBar(
-        leading: Icon(
+        leading: IconButton(onPressed: () {
+          Navigator.pop(context);
+        }, icon: Icon(
           Icons.arrow_back_ios_new_sharp,
-        ),
+        ),),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
@@ -33,30 +37,42 @@ class _TrainingState extends State<Training> {
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(
-                alignment: Alignment.center,
-                height: 150,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    color: Colors.blue.shade800,
-                    borderRadius: BorderRadius.circular(30)),
-                child: Text('Career',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 34,
-                        fontWeight: FontWeight.w700)),
+              GestureDetector(onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Career5();
+                },));
+              },
+                child: Container(
+                  alignment: Alignment.center,
+                  height: 150,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Colors.blue.shade800,
+                      borderRadius: BorderRadius.circular(30)),
+                  child: Text('Career',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 34,
+                          fontWeight: FontWeight.w700)),
+                ),
               ),
-              Container(alignment: Alignment.center,
-                height: 150,
-                width: double.infinity,
-                decoration: BoxDecoration(
-                    color: Colors.blue.shade800,
-                    borderRadius: BorderRadius.circular(30)),
-                child: Text('Academic',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 34,
-                        fontWeight: FontWeight.w700)),
+              GestureDetector(onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return AcademicPage();
+                },));
+              },
+                child: Container(alignment: Alignment.center,
+                  height: 150,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                      color: Colors.blue.shade800,
+                      borderRadius: BorderRadius.circular(30)),
+                  child: Text('Academic',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 34,
+                          fontWeight: FontWeight.w700)),
+                ),
               ),
             ]),
       ),

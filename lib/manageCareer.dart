@@ -1,3 +1,4 @@
+import 'package:dmythra/addmanagementcareeer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +15,15 @@ class _ManageCareerState extends State<ManageCareer> {
     return Scaffold(
       backgroundColor: Color(0xFF64B4CD),
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back_ios_new_sharp,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: Icon(
+            CupertinoIcons.back,
+            color: Colors.black,
+            size: 35,
+          ),
         ),
         actions: [
           Padding(
@@ -33,18 +41,26 @@ class _ManageCareerState extends State<ManageCareer> {
           height: 100,
           width: double.infinity,
           color: Color(0xFF64B4CD),
-          child: Row(mainAxisAlignment: MainAxisAlignment.end,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return Addcareer();
+                    },));
+                  },
                   icon: Icon(
                     CupertinoIcons.plus_circle,
                     size: 50,
                   )),
-              SizedBox(width: 20,),
+              SizedBox(
+                width: 20,
+              ),
             ],
           )),
-      body: Column(mainAxisAlignment: MainAxisAlignment.spaceBetween,children: [
+      body:
+          Column(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -64,7 +80,6 @@ class _ManageCareerState extends State<ManageCareer> {
             ),
           ],
         ),
-
         GestureDetector(
           child: Container(
             alignment: Alignment.center,

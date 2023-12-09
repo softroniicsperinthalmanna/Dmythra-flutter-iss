@@ -1,5 +1,11 @@
 import 'dart:ui';
 
+import 'package:dmythra/crewList.dart';
+import 'package:dmythra/manageTherapy.dart';
+import 'package:dmythra/manageacademic.dart';
+import 'package:dmythra/registration.dart';
+import 'package:dmythra/viewRequest.dart';
+import 'package:dmythra/viewactivitiesAA.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -35,10 +41,13 @@ class _OrgHomeState extends State<OrgHome> {
                 ),
                 Row(
                   children: [
-                    Icon(
+                    IconButton(onPressed: () {
+                      Navigator.pop(context);
+                    }, icon:Icon(
                       CupertinoIcons.back,
-                      size: 50,
-                    ),
+                      color: Colors.black,
+                      size: 35,
+                    ), ),
                   ],
                 ),
                 SizedBox(
@@ -47,36 +56,48 @@ class _OrgHomeState extends State<OrgHome> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      alignment: Alignment.center,
-                      height: 100,
-                      width: 160,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF275081),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Text('Register\nusers',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700)),
+                    GestureDetector(onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return Three();
+                      },));
+                    },
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 100,
+                        width: 160,
+                        decoration: BoxDecoration(
+                            color: Color(0xFF275081),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Text('Register\nusers',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 24,
+                                fontWeight: FontWeight.w700)),
+                      ),
                     ),
                     SizedBox(
                       width: 5,
                     ),
-                    Container(
-                      alignment: Alignment.center,
-                      height: 100,
-                      width: 160,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF275081),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Text('View\nRequest',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700)),
+                    GestureDetector(onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return Viewrequest1();
+                      },));
+                    },
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 100,
+                        width: 160,
+                        decoration: BoxDecoration(
+                            color: Color(0xFF275081),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Text('View\nRequest',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 24,
+                                fontWeight: FontWeight.w700)),
+                      ),
                     ),
                   ],
                 ),
@@ -86,19 +107,25 @@ class _OrgHomeState extends State<OrgHome> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Container(
-                      alignment: Alignment.center,
-                      height: 100,
-                      width: 160,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF275081),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Text('View\nActivities',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700)),
+                    GestureDetector(onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return ViewActivityOne();
+                      },));
+                    },
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 100,
+                        width: 160,
+                        decoration: BoxDecoration(
+                            color: Color(0xFF275081),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Text('View\nActivities',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 24,
+                                fontWeight: FontWeight.w700)),
+                      ),
                     ),
                   ],
                 ),
@@ -108,45 +135,57 @@ class _OrgHomeState extends State<OrgHome> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      alignment: Alignment.center,
-                      height: 100,
-                      width: 160,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF275081),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Text('Manage\nTherapy',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 24,
-                              fontWeight: FontWeight.w700)),
+                    GestureDetector(onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return Managetherapy1();
+                      },));
+                    },
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 100,
+                        width: 160,
+                        decoration: BoxDecoration(
+                            color: Color(0xFF275081),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Text('Manage\nTherapy',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 24,
+                                fontWeight: FontWeight.w700)),
+                      ),
                     ),
                     SizedBox(
                       width: 5,
                     ),
-                    Container(
-                      alignment: Alignment.center,
-                      height: 100,
-                      width: 160,
-                      decoration: BoxDecoration(
-                          color: Color(0xFF275081),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Column(
-                        children: [
-                          Text('Manage',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 24,
-                                  fontWeight: FontWeight.w700)),
-                          Text('Academic&\nCarreer',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700)),
-                        ],
+                    GestureDetector(onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return Manageacademic();
+                      },));
+                    },
+                      child: Container(
+                        alignment: Alignment.center,
+                        height: 100,
+                        width: 160,
+                        decoration: BoxDecoration(
+                            color: Color(0xFF275081),
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Column(
+                          children: [
+                            Text('Manage',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 24,
+                                    fontWeight: FontWeight.w700)),
+                            Text('Academic&\nCarreer',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w700)),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -179,7 +218,9 @@ class _OrgHomeState extends State<OrgHome> {
                                     color: Colors.blue.shade800,
                                     child: InkWell(
                                       onTap: () {
-                                        print('IconButton tapped!');
+                                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+                                          return Crew();
+                                        },));
                                       },
                                       child: SizedBox(
                                         width: 65,

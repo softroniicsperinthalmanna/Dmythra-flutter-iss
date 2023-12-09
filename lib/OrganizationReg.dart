@@ -1,3 +1,4 @@
+import 'package:dmythra/organizationhome.dart';
 import 'package:flutter/material.dart';
 
 class OrganizationReg1 extends StatefulWidget {
@@ -11,9 +12,12 @@ class _OrganizationReg1State extends State<OrganizationReg1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Color(0xFF64B4CD),
+      appBar: AppBar(
+          backgroundColor: Color(0xFF64B4CD),
           leading: IconButton(
-              onPressed: () {}, icon: Icon(Icons.arrow_back_ios_new))),
+              onPressed: () {
+                Navigator.pop(context);
+              }, icon: Icon(Icons.arrow_back_ios_new))),
       backgroundColor: Color(0xFF64B4CD),
       body: SafeArea(
         child: Padding(
@@ -198,7 +202,11 @@ class _OrganizationReg1State extends State<OrganizationReg1> {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF275081),
                     fixedSize: Size(200, 50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return OrgHome();
+                  },));
+                },
                 child: Text(
                   'Submit',
                   style: TextStyle(

@@ -13,9 +13,11 @@ class _ActivityState extends State<Activity> {
     return Scaffold(
       backgroundColor: Color(0xFF64B4CD),
       appBar: AppBar(
-        leading: Icon(
+        leading: IconButton(onPressed: () {
+          Navigator.pop(context);
+        }, icon: Icon(
           Icons.arrow_back_ios_new_sharp,
-        ),
+        ),),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),

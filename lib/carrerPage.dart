@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Career5 extends StatefulWidget {
@@ -14,9 +15,13 @@ class _Career5State extends State<Career5> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back_ios_new_sharp,
-        ),
+        leading: IconButton(onPressed: () {
+          Navigator.pop(context);
+        }, icon:Icon(
+          CupertinoIcons.back,
+          color: Colors.black,
+          size: 35,
+        ), ),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 10),

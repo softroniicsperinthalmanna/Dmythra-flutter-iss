@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class OrgList extends StatefulWidget {
@@ -13,9 +14,13 @@ class _OrgListState extends State<OrgList> {
     return Scaffold(
       backgroundColor: Color(0xFF64B4CD),
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back_ios_new_sharp,
-        ),
+        leading:IconButton(onPressed: () {
+          Navigator.pop(context);
+        }, icon:Icon(
+          CupertinoIcons.back,
+          color: Colors.black,
+          size: 35,
+        ), ),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),

@@ -1,3 +1,7 @@
+import 'package:dmythra/Medicine.dart';
+import 'package:dmythra/counseling.dart';
+import 'package:dmythra/physio.dart';
+import 'package:dmythra/yoga.dart';
 import 'package:flutter/material.dart';
 
 class Therapy1 extends StatefulWidget {
@@ -13,9 +17,11 @@ class _Therapy1State extends State<Therapy1> {
     return Scaffold(
       backgroundColor: Color(0xFF64B4CD),
       appBar: AppBar(
-        leading: Icon(
+        leading: IconButton(onPressed: () {
+          Navigator.pop(context);
+        }, icon: Icon(
           Icons.arrow_back_ios_new_sharp,
-        ),
+        ),),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
@@ -41,7 +47,11 @@ class _Therapy1State extends State<Therapy1> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue.shade800,
                         fixedSize: Size(200, 50)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return Counseling();
+                      },));
+                    },
                     child: Text(
                       'Counseling',
                       style: TextStyle(
@@ -62,7 +72,11 @@ class _Therapy1State extends State<Therapy1> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue.shade800,
                         fixedSize: Size(200, 50)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return Physiopage();
+                      },));
+                    },
                     child: Text(
                       'Physio Therapy',
                       style: TextStyle(
@@ -83,7 +97,11 @@ class _Therapy1State extends State<Therapy1> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue.shade800,
                         fixedSize: Size(200, 50)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return Medicine5();
+                      },));
+                    },
                     child: Text(
                       'Medication',
                       style: TextStyle(
@@ -104,7 +122,11 @@ class _Therapy1State extends State<Therapy1> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue.shade800,
                         fixedSize: Size(200, 50)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return Yoag1();
+                      },));
+                    },
                     child: Text(
                       'Yoga',
                       style: TextStyle(

@@ -1,43 +1,34 @@
-import 'package:dmythra/userHome.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:dmythra/sponsorHome.dart';
 import 'package:flutter/material.dart';
 
-class Three extends StatefulWidget {
-  const Three({super.key});
+class SponsorReg extends StatefulWidget {
+  const SponsorReg({super.key});
 
   @override
-  State<Three> createState() => _ThreeState();
+  State<SponsorReg> createState() => _SponsorRegState();
 }
 
-class _ThreeState extends State<Three> {
+class _SponsorRegState extends State<SponsorReg> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF64B4CD),
-      appBar: AppBar(backgroundColor: Colors.transparent, leading: Row(
-        children: [
-          IconButton(
+      appBar: AppBar(
+          backgroundColor: Color(0xFF64B4CD),
+          leading: IconButton(
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Icon(
-                CupertinoIcons.back,
-                size: 40,
-              ))
-        ],
-      ),),
+              icon: Icon(Icons.arrow_back_ios_new))),
+      backgroundColor: Color(0xFF64B4CD),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: ListView(children: [
-            SizedBox(
-              height: 20,
-            ),
             Row(
               children: [
                 SizedBox(width: 15),
                 Text(
-                  'UD ID',
+                  'Name',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
@@ -49,7 +40,6 @@ class _ThreeState extends State<Three> {
             TextField(
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.only(left: 20),
-                hintText: 'your id',
                 disabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: const BorderSide(color: Colors.white),
@@ -73,7 +63,7 @@ class _ThreeState extends State<Three> {
               children: [
                 SizedBox(width: 15),
                 Text(
-                  'Disability type',
+                  'Dtae of birth',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
@@ -85,43 +75,6 @@ class _ThreeState extends State<Three> {
             TextField(
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.only(left: 20),
-                hintText: 'choose below',
-                disabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: const BorderSide(color: Colors.white),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  borderSide: const BorderSide(color: Colors.white),
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  borderSide: const BorderSide(color: Colors.white),
-                ),
-                filled: true,
-                fillColor: Colors.grey[100],
-              ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Row(
-              children: [
-                SizedBox(width: 15),
-                Text(
-                  'Date of Birth',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 24),
-                ),
-              ],
-            ),
-            SizedBox(height: 3),
-            TextField(
-              decoration: InputDecoration(
-                contentPadding: EdgeInsets.only(left: 20),
-                hintText: 'choose below',
                 disabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: const BorderSide(color: Colors.white),
@@ -157,7 +110,6 @@ class _ThreeState extends State<Three> {
             TextField(
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.only(left: 20),
-                hintText: 'example@123',
                 disabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: const BorderSide(color: Colors.white),
@@ -193,7 +145,6 @@ class _ThreeState extends State<Three> {
             TextField(
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.only(left: 20),
-                hintText: 'password',
                 disabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: const BorderSide(color: Colors.white),
@@ -229,7 +180,6 @@ class _ThreeState extends State<Three> {
             TextField(
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.only(left: 20),
-                hintText: '2465 4654 5545',
                 disabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: const BorderSide(color: Colors.white),
@@ -246,16 +196,19 @@ class _ThreeState extends State<Three> {
                 fillColor: Colors.grey[100],
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 180,
+            ),
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue.shade800, fixedSize: Size(
-                    200, 50)),
-
+                    backgroundColor: Color(0xFF275081),
+                    fixedSize: Size(200, 50)),
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return Home1();
-                  },));
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return SponsorHome();
+                    },
+                  ));
                 },
                 child: Text(
                   'Submit',
@@ -264,7 +217,9 @@ class _ThreeState extends State<Three> {
                       fontWeight: FontWeight.w700,
                       color: Colors.white),
                 )),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
           ]),
         ),
       ),

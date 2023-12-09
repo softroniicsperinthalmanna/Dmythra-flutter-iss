@@ -1,3 +1,8 @@
+import 'package:dmythra/activityPost.dart';
+import 'package:dmythra/help.dart';
+import 'package:dmythra/therapySupport.dart';
+import 'package:dmythra/training.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Home1 extends StatefulWidget {
@@ -70,9 +75,10 @@ class _Home1State extends State<Home1> {
         ),
       ),
       appBar: AppBar(
-          leading: Icon(
-            Icons.arrow_back_ios_new_sharp,
-          ),
+          leading: IconButton(onPressed: () {
+            Navigator.pop(context);
+
+          }, icon: Icon(CupertinoIcons.back,size: 40,)),
           backgroundColor: Color(0xFF64B4CD)),
       backgroundColor: Color(0xFF64B4CD),
       body: Padding(
@@ -83,6 +89,36 @@ class _Home1State extends State<Home1> {
             children: [
               ClipOval(
                 child: Center(
+                  child: GestureDetector(onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return Therapy1();
+                    },));
+                  },
+                    child: Container(
+                      height: 150,
+                      width: 150,
+                      decoration: BoxDecoration(color: Colors.blue.shade800),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('Therapy\n Support',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 20)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              ClipOval(
+                child: GestureDetector(onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Activity();
+                  },));
+                },
                   child: Container(
                     height: 150,
                     width: 150,
@@ -90,33 +126,15 @@ class _Home1State extends State<Home1> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Therapy\n Support',
+                        Text(
                             textAlign: TextAlign.center,
+                            'Activities\n(posts)',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.w700,
                                 fontSize: 20)),
                       ],
                     ),
-                  ),
-                ),
-              ),
-              ClipOval(
-                child: Container(
-                  height: 150,
-                  width: 150,
-                  decoration: BoxDecoration(color: Colors.blue.shade800),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                          textAlign: TextAlign.center,
-                          'Activities\n(posts)',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 20)),
-                    ],
                   ),
                 ),
               ),
@@ -129,40 +147,52 @@ class _Home1State extends State<Home1> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               ClipOval(
-                child: Container(
-                  height: 150,
-                  width: 150,
-                  decoration: BoxDecoration(color: Colors.blue.shade800),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                          textAlign: TextAlign.center,
-                          'Help',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 20)),
-                    ],
+                child: GestureDetector(onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Help1();
+                  },));
+                },
+                  child: Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(color: Colors.blue.shade800),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                            textAlign: TextAlign.center,
+                            'Help',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 20)),
+                      ],
+                    ),
                   ),
                 ),
               ),
               ClipOval(
-                child: Container(
-                  height: 150,
-                  width: 150,
-                  decoration: BoxDecoration(color: Colors.blue.shade800),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                          textAlign: TextAlign.center,
-                          'Training',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w700,
-                              fontSize: 20)),
-                    ],
+                child: GestureDetector(onTap:() {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return Training();
+                  },));
+                },
+                  child: Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(color: Colors.blue.shade800),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                            textAlign: TextAlign.center,
+                            'Training',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w700,
+                                fontSize: 20)),
+                      ],
+                    ),
                   ),
                 ),
               ),

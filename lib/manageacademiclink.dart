@@ -1,3 +1,4 @@
+import 'package:dmythra/addingmanageAcamedy.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -14,9 +15,13 @@ class _ManageacademiclinkState extends State<Manageacademiclink> {
     return Scaffold(
       backgroundColor: Color(0xFF64B4CD),
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back_ios_new_sharp,
-        ),
+        leading:IconButton(onPressed: () {
+          Navigator.pop(context);
+        }, icon:Icon(
+          CupertinoIcons.back,
+          color: Colors.black,
+          size: 35,
+        ), ),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
@@ -36,7 +41,11 @@ class _ManageacademiclinkState extends State<Manageacademiclink> {
           child: Row(mainAxisAlignment: MainAxisAlignment.end,
             children: [
               IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return AddmingmanageAcademy();
+                    },));
+                  },
                   icon: Icon(
                     CupertinoIcons.plus_circle,
                     size: 50,

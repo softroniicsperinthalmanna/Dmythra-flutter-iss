@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'OrganizationReg.dart';
 
 class OrganszationLogin extends StatefulWidget {
   const OrganszationLogin({super.key});
@@ -12,6 +15,21 @@ class _OrganszationLoginState extends State<OrganszationLogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF64B4CD),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: Row(
+          children: [
+            IconButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                icon: Icon(
+                  CupertinoIcons.back,
+                  size: 40,
+                ))
+          ],
+        ),
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 50),
@@ -26,12 +44,12 @@ class _OrganszationLoginState extends State<OrganszationLogin> {
                 contentPadding: EdgeInsets.only(left: 20),
                 label: Center(
                     child: Text(
-                      'Username',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 20),
-                    )),
+                  'Username',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 20),
+                )),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50),
                   borderSide: const BorderSide(color: Colors.white),
@@ -52,12 +70,12 @@ class _OrganszationLoginState extends State<OrganszationLogin> {
                 contentPadding: EdgeInsets.only(left: 20),
                 label: Center(
                     child: Text(
-                      'Password',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 20),
-                    )),
+                  'Password',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 20),
+                )),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50),
                   borderSide: const BorderSide(color: Colors.white),
@@ -113,7 +131,13 @@ class _OrganszationLoginState extends State<OrganszationLogin> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return OrganizationReg1();
+                  },
+                ));
+              },
               child: Text(
                 "Register Now",
                 style: TextStyle(
@@ -122,7 +146,6 @@ class _OrganszationLoginState extends State<OrganszationLogin> {
                     fontSize: 22),
               ),
             ),
-
           ]),
         ),
       ),

@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Medication extends StatefulWidget {
@@ -37,9 +38,13 @@ class _MedicationState extends State<Medication> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
-                      Icons.arrow_back_ios_new_sharp,
-                    ),
+                    IconButton(onPressed: () {
+                      Navigator.pop(context);
+                    }, icon:Icon(
+                      CupertinoIcons.back,
+                      color: Colors.black,
+                      size: 35,
+                    ), ),
                     Icon(
                       Icons.home_filled,
                       color: Colors.black,

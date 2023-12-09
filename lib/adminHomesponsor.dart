@@ -39,6 +39,9 @@ class _AdminHomesponsorState extends State<AdminHomesponsor> {
           backgroundColor: Color(0xFFC6DFE6),
           child: ListView(
             children: [
+              SizedBox(
+                height: 100,
+              ),
               ListTile(
                 leading: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -46,7 +49,81 @@ class _AdminHomesponsorState extends State<AdminHomesponsor> {
                       fixedSize: Size(250, 50)),
                   onPressed: () {},
                   child: Text(
-                    'Login',
+                    'User',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              ListTile(
+                leading: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue.shade800,
+                      fixedSize: Size(250, 50)),
+                  onPressed: () {},
+                  child: Text(
+                    'Organization',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              ListTile(
+                leading: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue.shade800,
+                      fixedSize: Size(250, 50)),
+                  onPressed: () {},
+                  child: Text(
+                    'Sponsor',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              ListTile(
+                leading: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue.shade800,
+                      fixedSize: Size(150, 250)),
+                  onPressed: () {},
+                  child: Text(textAlign: TextAlign.center,
+                    'View\nRequest',
+                    style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: Colors.white),
+                  ),
+                ),
+              ),  SizedBox(
+                height: 30,
+              ),
+              ListTile(
+                leading: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.blue.shade800,
+                      fixedSize: Size(150, 250)),
+                  onPressed: () {},
+                  child: Text(textAlign: TextAlign.center,
+                    'View\nActivities',
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.w700,

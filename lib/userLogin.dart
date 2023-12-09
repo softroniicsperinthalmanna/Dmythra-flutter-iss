@@ -1,3 +1,5 @@
+import 'package:dmythra/registration.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Signup extends StatefulWidget {
@@ -12,6 +14,16 @@ class _SignupState extends State<Signup> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF64B4CD),
+      appBar: AppBar(backgroundColor: Colors.transparent,leading: Row(
+        children: [
+          IconButton(
+              onPressed: () {Navigator.pop(context);},
+              icon: Icon(
+                CupertinoIcons.back,
+                size: 40,
+              ))
+        ],
+      ),),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 50),
@@ -113,7 +125,11 @@ class _SignupState extends State<Signup> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) {
+                  return Three();
+                },));
+              },
               child: Text(
                 "Register Now",
                 style: TextStyle(
@@ -122,7 +138,6 @@ class _SignupState extends State<Signup> {
                     fontSize: 22),
               ),
             ),
-
           ]),
         ),
       ),

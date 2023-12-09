@@ -1,3 +1,5 @@
+import 'package:dmythra/sponsorRegist.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Sponsorlogin extends StatefulWidget {
@@ -12,6 +14,16 @@ class _SponsorloginState extends State<Sponsorlogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF64B4CD),
+      appBar: AppBar(backgroundColor: Colors.transparent,leading: Row(
+        children: [
+          IconButton(
+              onPressed: () {Navigator.pop(context);},
+              icon: Icon(
+                CupertinoIcons.back,
+                size: 40,
+              ))
+        ],
+      ),),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 50),
@@ -113,7 +125,9 @@ class _SponsorloginState extends State<Sponsorlogin> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return SponsorReg();
+              },));},
               child: Text(
                 "Register Now",
                 style: TextStyle(

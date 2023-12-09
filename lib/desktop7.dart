@@ -105,8 +105,7 @@ class _Desktop7State extends State<Desktop7> {
                       backgroundColor: Colors.blue.shade800,
                       fixedSize: Size(150, 250)),
                   onPressed: () {},
-                  child: Text(
-                    textAlign: TextAlign.center,
+                  child: Text(textAlign: TextAlign.center,
                     'View\nRequest',
                     style: TextStyle(
                         fontSize: 18,
@@ -114,8 +113,7 @@ class _Desktop7State extends State<Desktop7> {
                         color: Colors.white),
                   ),
                 ),
-              ),
-              SizedBox(
+              ),  SizedBox(
                 height: 30,
               ),
               ListTile(
@@ -124,8 +122,7 @@ class _Desktop7State extends State<Desktop7> {
                       backgroundColor: Colors.blue.shade800,
                       fixedSize: Size(150, 250)),
                   onPressed: () {},
-                  child: Text(
-                    textAlign: TextAlign.center,
+                  child: Text(textAlign: TextAlign.center,
                     'View\nActivities',
                     style: TextStyle(
                         fontSize: 18,

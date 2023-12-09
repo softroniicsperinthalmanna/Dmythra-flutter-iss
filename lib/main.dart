@@ -31,15 +31,19 @@ import 'package:dmythra/organizationList.dart';
 import 'package:dmythra/organizationhome.dart';
 import 'package:dmythra/other.dart';
 import 'package:dmythra/registration.dart';
+import 'package:dmythra/sponsorHome.dart';
 import 'package:dmythra/sponsorList.dart';
 import 'package:dmythra/training.dart';
 import 'package:dmythra/transport.dart';
 import 'package:dmythra/userLogin.dart';
+import 'package:dmythra/viewActivityBB.dart';
 import 'package:dmythra/viewRequest.dart';
+import 'package:dmythra/viewactivitiesAA.dart';
 import 'package:dmythra/yoga.dart';
 import 'package:flutter/material.dart';
 
 import 'physio.dart';
+import 'sponsorRegist.dart';
 import 'startingPage.dart';
 import 'therapySupport.dart';
 import 'userHome.dart';
@@ -60,7 +64,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: Desktop7()
+      home: One()
     );
   }
 }

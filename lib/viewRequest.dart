@@ -1,3 +1,5 @@
+import 'package:dmythra/acceptedrequest.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Viewrequest1 extends StatefulWidget {
@@ -13,9 +15,13 @@ class _Viewrequest1State extends State<Viewrequest1> {
     return Scaffold(
       backgroundColor: Color(0xFF64B4CD),
       appBar: AppBar(
-        leading: Icon(
-          Icons.arrow_back_ios_new_sharp,
-        ),
+        leading: IconButton(onPressed: () {
+          Navigator.pop(context);
+        }, icon:Icon(
+          CupertinoIcons.back,
+          color: Colors.black,
+          size: 35,
+        ), ),
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
@@ -194,7 +200,11 @@ class _Viewrequest1State extends State<Viewrequest1> {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF275081),
                     fixedSize: Size(300, 50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return AcceptedRequest();
+                  },));
+                },
                 child: Text(
                   'Accepted request',
                   style: TextStyle(
