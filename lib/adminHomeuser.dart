@@ -1,5 +1,7 @@
 import 'dart:ui';
 
+import 'package:dmythra/adminLogin.dart';
+import 'package:dmythra/desktop7.dart';
 import 'package:flutter/material.dart';
 
 class AdminHomeUser extends StatefulWidget {
@@ -28,10 +30,11 @@ class _AdminHomeUserState extends State<AdminHomeUser> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 15.0),
-            child: Icon(
-              Icons.home,
-              size: 35,
-            ),
+            child: IconButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return AdminLogin();
+              },));
+            }, icon: Icon(Icons.home,size: 40),)
           )
         ],
       ),
@@ -121,7 +124,11 @@ class _AdminHomeUserState extends State<AdminHomeUser> {
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue.shade800,
                       fixedSize: Size(150, 250)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return Desktop7();
+                    },));
+                  },
                   child: Text(textAlign: TextAlign.center,
                     'View\nActivities',
                     style: TextStyle(

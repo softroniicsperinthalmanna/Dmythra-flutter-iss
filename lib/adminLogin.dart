@@ -1,3 +1,7 @@
+import 'package:dmythra/2ndPage.dart';
+import 'package:dmythra/adminHomesponsor.dart';
+import 'package:dmythra/adminHomeuser.dart';
+import 'package:dmythra/desktop5.dart';
 import 'package:flutter/material.dart';
 
 class AdminLogin extends StatefulWidget {
@@ -20,13 +24,30 @@ class _AdminLoginState extends State<AdminLogin> {
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
-              icon: Icon(Icons.settings,size: 35),
+              icon: Icon(Icons.settings, size: 35),
               onPressed: () {
                 Scaffold.of(context).openDrawer();
               },
             );
           },
         ),
+        actions: [
+          TextButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return Two();
+                  },
+                ));
+              },
+              child: Text(
+                'Login as',
+                style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700),
+              ))
+        ],
       ),
       drawer: Drawer(
         backgroundColor: Color(0xFFC6DFE6),
@@ -54,9 +75,15 @@ class _AdminLoginState extends State<AdminLogin> {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue.shade800,
                     fixedSize: Size(250, 50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return AdminHomeUser();
+                    },
+                  ));
+                },
                 child: Text(
-                  'Login',
+                  'User',
                   style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.w700,
@@ -64,14 +91,22 @@ class _AdminLoginState extends State<AdminLogin> {
                 ),
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             Center(
               child: ListTile(
                 leading: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue.shade800,
                       fixedSize: Size(250, 50)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return AdminHomeUser();
+                      },
+                    ));
+                  },
                   child: Text(
                     'Organization',
                     style: TextStyle(
@@ -82,13 +117,21 @@ class _AdminLoginState extends State<AdminLogin> {
                 ),
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             ListTile(
               leading: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue.shade800,
                     fixedSize: Size(250, 50)),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return AdminHomesponsor();
+                    },
+                  ));
+                },
                 child: Text(
                   'Sponsor',
                   style: TextStyle(
@@ -98,15 +141,24 @@ class _AdminLoginState extends State<AdminLogin> {
                 ),
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(
+              height: 30,
+            ),
             Center(
               child: ListTile(
                 leading: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blue.shade800,
                       fixedSize: Size(150, 250)),
-                  onPressed: () {},
-                  child: Text(textAlign: TextAlign.center,
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return Desktop5();
+                      },
+                    ));
+                  },
+                  child: Text(
+                    textAlign: TextAlign.center,
                     'View\nRequest',
                     style: TextStyle(
                         fontSize: 18,

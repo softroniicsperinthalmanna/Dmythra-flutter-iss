@@ -1,3 +1,4 @@
+import 'package:dmythra/adminLogin.dart';
 import 'package:dmythra/sponsorRegist.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,16 +15,22 @@ class _SponsorloginState extends State<Sponsorlogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Color(0xFF64B4CD),
-      appBar: AppBar(backgroundColor: Colors.transparent,leading: Row(
-        children: [
-          IconButton(
-              onPressed: () {Navigator.pop(context);},
-              icon: Icon(
-                CupertinoIcons.back,
-                size: 40,
-              ))
-        ],
-      ),),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              CupertinoIcons.back,
+              size: 40,
+            )),
+        actions: [IconButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) {
+            return AdminLogin();
+          },));
+        }, icon: Icon(CupertinoIcons.profile_circled,size: 40,))],
+      ),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 50),
@@ -38,12 +45,12 @@ class _SponsorloginState extends State<Sponsorlogin> {
                 contentPadding: EdgeInsets.only(left: 20),
                 label: Center(
                     child: Text(
-                      'Username',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 20),
-                    )),
+                  'Username',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 20),
+                )),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50),
                   borderSide: const BorderSide(color: Colors.white),
@@ -64,12 +71,12 @@ class _SponsorloginState extends State<Sponsorlogin> {
                 contentPadding: EdgeInsets.only(left: 20),
                 label: Center(
                     child: Text(
-                      'Password',
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 20),
-                    )),
+                  'Password',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 20),
+                )),
                 enabledBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(50),
                   borderSide: const BorderSide(color: Colors.white),
@@ -125,9 +132,13 @@ class _SponsorloginState extends State<Sponsorlogin> {
               ),
             ),
             TextButton(
-              onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return SponsorReg();
-              },));},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return SponsorReg();
+                  },
+                ));
+              },
               child: Text(
                 "Register Now",
                 style: TextStyle(
@@ -136,7 +147,6 @@ class _SponsorloginState extends State<Sponsorlogin> {
                     fontSize: 22),
               ),
             ),
-
           ]),
         ),
       ),

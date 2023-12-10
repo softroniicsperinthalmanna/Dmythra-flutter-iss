@@ -63,7 +63,7 @@ class _SponsorRegState extends State<SponsorReg> {
               children: [
                 SizedBox(width: 15),
                 Text(
-                  'Dtae of birth',
+                  'Date of birth',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w700,

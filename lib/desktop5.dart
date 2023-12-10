@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:dmythra/adminLogin.dart';
 import 'package:flutter/material.dart';
 
 class Desktop5 extends StatefulWidget {
@@ -28,10 +29,11 @@ class _Desktop5State extends State<Desktop5> {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 15.0),
-            child: Icon(
-              Icons.home,
-              size: 35,
-            ),
+            child: IconButton(onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return AdminLogin();
+              },));
+            }, icon: Icon(Icons.home,size: 40),)
           )
         ],
       ),
